@@ -4,17 +4,17 @@ import { Button } from 'antd';
 
 const Home = (props) => {
   const { title } = props;
-  console.log('renderd', title);
-  const changeLangs = () => {
+  // const changeLangs = () => {
 
-    const lang = getLocale()
-    const change = lang === 'zh-CN' ? 'en-US' : 'zh-CN'
-    //     // 刷新页面
-    // setLocale('zh-TW', true);
-    // // 不刷新页面
-    setLocale(change, false);
-  }
-  const intl = useIntl();
+  //   const lang = getLocale()
+  //   const change = lang === 'zh-CN' ? 'en-US' : 'zh-CN'
+  //   //     // 刷新页面
+  //   // setLocale('zh-TW', true);
+  //   // // 不刷新页面
+  //   setLocale(change, false);
+  // }
+  // const intl = useIntl();
+  console.log('test--', window.location.href)
   return (
     <div>
       <Helmet>
@@ -22,12 +22,8 @@ const Home = (props) => {
         <title>bar-Hello Umi Bar Title</title>
       </Helmet>
       <h1>{title}</h1>
-      <h2>{intl.formatMessage(
-        {
-          id: 'umi',
-        }
-      )}</h2>
-      <Button onClick={changeLangs}>切换语言</Button>
+      <h2>test</h2>
+      {/* <Button onClick={changeLangs}>切换语言</Button> */}
     </div>
   )
 }

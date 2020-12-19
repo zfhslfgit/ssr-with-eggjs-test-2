@@ -25,7 +25,7 @@ class HomeController extends Controller {
     ctx.status = 200;
     const { err, html } = await render({
       path: ctx.request.url,
-      mode: 'stream',
+      mode: 'string',
     });
 
     if (err) {
