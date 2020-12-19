@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect, useIntl, getLocale, setLocale, Helmet} from 'umi';
 import { Button } from 'antd';
+import styled from "styled-components";
 
 const Home = (props) => {
   const { title } = props;
@@ -14,7 +15,15 @@ const Home = (props) => {
   //   setLocale(change, false);
   // }
   // const intl = useIntl();
-  console.log('test--', window.location.href)
+
+  // console.log('test--', window.location.href)
+
+
+  const TestTitle = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
   return (
     <div>
       <Helmet>
@@ -23,6 +32,9 @@ const Home = (props) => {
       </Helmet>
       <h1>{title}</h1>
       <h2>test</h2>
+      <TestTitle>
+        Hello World!-style
+      </TestTitle>
       {/* <Button onClick={changeLangs}>切换语言</Button> */}
     </div>
   )
